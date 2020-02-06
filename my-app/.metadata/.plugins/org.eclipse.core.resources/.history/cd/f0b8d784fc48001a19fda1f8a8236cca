@@ -1,0 +1,100 @@
+package NewYearGift;
+import java.util.*;
+public class NewYearGift 
+	    {
+	      public static void main(String args[])
+	         {
+	    	    float[] sw = new float[100]; 
+	    	    float[] ca = new float[100];
+	    	    AddObjects a=new AddObjects();
+	    	    float p,q;
+	             //String name_of_sweet;
+	             float sweet_weight;
+	             int no_of_chocolates;
+	             int ch,op;
+	             Scanner s=new Scanner(System.in);
+	             menuloop:
+	             while(true)
+	               {
+	                 System.out.println("Menu\n");
+	                 System.out.println("1.Sweets\n");
+	                 System.out.println("2.chocolates\n");
+	                 System.out.println("3.exit\n");
+	                 System.out.println("Select ur item\n");
+	                 ch=s.nextInt();
+	                 switch(ch)
+	                   {
+	                     case 1:System.out.println("1.kaju katli\n");
+	                            System.out.println("2.Mysorepak\n");
+	                            System.out.println("3.Jalebi\n");
+	                            System.out.println("Select ur favourite sweet\n");
+	                            op=s.nextInt();
+	                            switch(op)
+	                               {
+	                                  
+	                                  case 1:System.out.println("Enter quantity of the sweet kaju katli\n");
+	                                         sweet_weight=s.nextFloat();
+	                                         KajuKatli k=new KajuKatli("Kaju katli",sweet_weight,20);
+	                                         //System.out.println("Total in ur basket is");
+	                                         p=k.gene_cost();
+	                                         a.addSweets(p);
+	                                         break;
+	                                  case 2:System.out.println("Enter quantity of the sweet Mysorepak\n");
+	                                         sweet_weight=s.nextFloat();
+	                                         Mysorepak m=new Mysorepak("Mysorepak",sweet_weight,15);
+	                                         p=m.gene_cost();
+	                                         a.addSweets(p);
+	                                         break;
+	                                  case 3:System.out.println("Enter quantity of the sweet Jalebi\n");
+	                                         sweet_weight=s.nextFloat();
+	                                         Jalebi j=new Jalebi("Jalebi",sweet_weight,10);
+	                                         p=j.gene_cost();
+	                                         a.addSweets(p);
+	                                         break;
+	                                         
+	                               }
+	                            break;
+	                     case 2:System.out.println("1.Snickers\n");
+	                            System.out.println("2.Fivestar\n");
+	                            System.out.println("3.DairyMilk\n");
+	                            System.out.println("Select ur favourite chocolate\n");
+	                            op=s.nextInt();
+	                            switch(op)
+	                               {
+	                                  case 1:System.out.println("Enter the no of Snickers u want\n");
+	                                         no_of_chocolates=s.nextInt();
+	                                         Snickers s1=new Snickers("Snickers",no_of_chocolates,40);
+	                                         q=s1.gene_cost();
+	                                         a.addChocolates(q);
+	                                         break;
+	                                  case 2:System.out.println("Enter the no of Fivestars u want\n");
+	                                         no_of_chocolates=s.nextInt();
+	                                         Fivestar f=new Fivestar("Fivestar",no_of_chocolates,10);
+	                                         q=f.gene_cost();
+	                                         a.addChocolates(q);
+	                                         break;
+	                                  case 3:System.out.println("Enter the no of DairyMilks u want\n");
+	                                         no_of_chocolates=s.nextInt();
+	                                         DairyMilk d=new DairyMilk("DairyMilk",no_of_chocolates,10);
+	                                         q=d.gene_cost();
+	                                         a.addChocolates(q);
+	                                         break;
+	                               }
+	                           break;
+	                     case 3:break menuloop;
+	                    }
+	               }
+	                 a.displaysw();
+	                  
+	                 }
+	               }
+	                            
+	                            
+
+
+	                 
+	                 
+
+	                 
+	              
+
